@@ -1,9 +1,12 @@
 package com.example.demo;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import lombok.Getter;
 
@@ -28,4 +31,9 @@ public class Library {
   // association name defaults to the property name
   // @RestResource(path = "libraryAddress", rel="address")
   private Address address;
+
+  // `mappedBy` is the field that owns the relationship
+  // only specified on the inverse (non-owning) side of the association
+  @OneToMany(mappedBy = "library")
+  private List<Book> books;
 }

@@ -1,1 +1,1 @@
-Spring Data JPA/REST example demonstrating **one-to-one relationship** between two entities.
+Spring Data JPA/REST example demonstrating **one-to-one**, **one-to-many** and **many-to-many** relationships.

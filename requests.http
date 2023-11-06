@@ -49,3 +49,39 @@ GET http://localhost:8081/api/libraries/1/address
 ###
 
 DELETE http://localhost:8081/api/libraries/1/address
+
+###
+
+GET http://localhost:8081/api/addresses/1/library
+
+###
+
+GET http://localhost:8081/api/books
+
+###
+
+POST http://localhost:8081/api/books
+Content-Type: application/json
+
+{
+  "title": "bookA"
+}
+
+###
+
+GET http://localhost:8081/api/books/1
+
+###
+
+PUT http://localhost:8081/api/books/1/library
+Content-Type:text/uri-list
+
+http://localhost:8081/api/libraries/1
+
+###
+
+GET http://localhost:8081/api/books/1/library
+
+###
+
+GET http://localhost:8081/api/libraries/1/books
