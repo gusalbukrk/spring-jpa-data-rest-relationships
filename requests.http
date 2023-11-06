@@ -1,0 +1,51 @@
+GET http://localhost:8081/api
+
+###
+
+GET http://localhost:8081/api/addresses
+
+###
+
+GET http://localhost:8081/api/libraries
+
+###
+
+POST http://localhost:8081/api/addresses
+Content-Type: application/json
+
+{
+  "location": "addressA"
+}
+
+###
+
+# create library with address set to null
+POST http://localhost:8081/api/libraries
+Content-Type: application/json
+
+{
+  "name": "libraryA"
+}
+
+###
+
+GET http://localhost:8081/api/addresses/1
+
+###
+
+GET http://localhost:8081/api/libraries/1
+
+###
+
+PUT http://localhost:8081/api/libraries/1/address
+Content-Type:text/uri-list
+
+http://localhost:8081/api/addresses/1
+
+###
+
+GET http://localhost:8081/api/libraries/1/address
+
+###
+
+DELETE http://localhost:8081/api/libraries/1/address
