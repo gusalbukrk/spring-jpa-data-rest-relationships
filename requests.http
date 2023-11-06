@@ -85,3 +85,34 @@ GET http://localhost:8081/api/books/1/library
 ###
 
 GET http://localhost:8081/api/libraries/1/books
+
+###
+
+GET http://localhost:8081/api/authors
+
+###
+
+POST http://localhost:8081/api/authors
+Content-Type: application/json
+
+{
+  "name": "authorA"
+}
+
+###
+
+GET http://localhost:8081/api/authors/1
+
+###
+
+PUT http://localhost:8081/api/authors/1/books
+Content-Type:text/uri-list
+
+http://localhost:8081/api/books/1
+
+###
+
+GET http://localhost:8081/api/authors/1/books
+
+###
+GET http://localhost:8081/api/books/1/authors
