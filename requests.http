@@ -24,7 +24,8 @@ POST http://localhost:8081/api/libraries
 Content-Type: application/json
 
 {
-  "name": "libraryA"
+  "name": "libraryA",
+  "address": "http://localhost:8081/api/addresses/1"
 }
 
 ###
